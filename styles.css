@@ -83,7 +83,7 @@ button, input, textarea { font: inherit; }
 
 .question-grid { position: relative; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 16px; margin-top: 70px; isolation: isolate; }
 .question-grid::before { content: ""; position: absolute; z-index: 0; top: 13%; bottom: 12%; left: 50%; width: 1px; background: linear-gradient(180deg, transparent, rgba(116,86,154,.2) 18%, rgba(116,86,154,.28) 82%, transparent); transform: translateX(-50%); }
-.question-card { position: relative; z-index: 1; min-height: 320px; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; padding: 30px; background: linear-gradient(145deg, #fff 0%, #faf8fc 100%); border: 1px solid var(--line-light); border-radius: 22px; box-shadow: 0 18px 60px rgba(35,26,48,.04); transition: transform .38s var(--ease), border-color .38s var(--ease), box-shadow .38s var(--ease), background-color .38s var(--ease); }
+.question-card { position: relative; z-index: 1; min-height: 320px; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; padding: 30px; background: linear-gradient(145deg, #fff 0%, #faf8fc 100%); border: 1px solid var(--line-light); border-radius: 22px; box-shadow: 0 12px 36px rgba(35,26,48,.025); transition: transform .38s var(--ease), border-color .38s var(--ease), box-shadow .38s var(--ease), background-color .38s var(--ease); }
 .question-card:nth-of-type(1) { grid-column: 1 / span 7; }
 .question-card:nth-of-type(2) { grid-column: 8 / span 5; }
 .question-card:nth-of-type(3) { grid-column: 2 / span 5; }
@@ -92,7 +92,7 @@ button, input, textarea { font: inherit; }
 .question-card::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 100% 0, rgba(162,130,194,.17), transparent 38%); opacity: .38; transition: opacity .38s var(--ease), transform .55s var(--ease); }
 .question-card::after { content: ""; position: absolute; top: -95px; right: -95px; width: 190px; height: 190px; border: 1px solid rgba(116,86,154,.18); border-radius: 50%; transition: transform .55s var(--ease), border-color .38s var(--ease); }
 .question-card > * { position: relative; z-index: 1; }
-.question-card-core { min-height: 258px; display: grid; grid-template-columns: 112px minmax(0, 1fr); grid-template-rows: auto 1fr; column-gap: 42px; align-items: end; padding: 34px 38px; background: linear-gradient(115deg, #eee5f5 0%, #f7f2fa 48%, #fff 100%); border-color: rgba(116,86,154,.3); box-shadow: 0 26px 76px rgba(74,50,102,.11); }
+.question-card-core { min-height: 258px; display: grid; grid-template-columns: 112px minmax(0, 1fr); grid-template-rows: auto 1fr; column-gap: 42px; align-items: end; padding: 34px 38px; background: linear-gradient(115deg, #eee5f5 0%, #f7f2fa 48%, #fff 100%); border-color: rgba(116,86,154,.26); box-shadow: 0 16px 46px rgba(74,50,102,.065); }
 .question-card-core::before { background: radial-gradient(circle at 100% 0, rgba(127,91,164,.24), transparent 42%); opacity: .72; }
 .question-card-core::after { top: -175px; right: -110px; width: 350px; height: 350px; }
 .question-card-core .card-index { grid-column: 1 / -1; align-self: start; }
@@ -106,7 +106,7 @@ button, input, textarea { font: inherit; }
 .question-card h3 { margin: 0 0 14px; font-size: 22px; letter-spacing: -.03em; transition: color .38s var(--ease); }
 .question-card p { max-width: 430px; margin: 0; color: #666570; font-size: 14px; line-height: 1.55; }
 @media (hover: hover) and (pointer: fine) {
-  .question-card[data-reveal]:hover { transform: translateY(-7px); border-color: rgba(116,86,154,.38); box-shadow: 0 28px 74px rgba(53,35,75,.13); }
+  .question-card[data-reveal]:hover { transform: translateY(-5px); border-color: rgba(116,86,154,.34); box-shadow: 0 22px 58px rgba(53,35,75,.1); }
   .question-card:hover::before { opacity: 1; transform: scale(1.035); }
   .question-card:hover::after { border-color: rgba(116,86,154,.34); transform: translate(-12px, 12px) scale(1.08); }
   .question-card:hover .card-index::after { width: 58px; background: rgba(116,86,154,.52); }
