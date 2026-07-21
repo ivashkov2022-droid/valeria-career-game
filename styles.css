@@ -397,9 +397,9 @@ button, input, textarea { font: inherit; }
 
 @media (max-width: 390px) {
   .brand { gap: 10px; }
-  .brand-copy { min-width: 0; }
+  .brand-copy { min-width: 0; gap: 4px; }
   .brand-copy strong { font-size: 11px; }
-  .brand-copy small { display: block; color: rgba(248, 247, 250, .68); font-size: 6px; line-height: 1.2; letter-spacing: .1em; white-space: nowrap; }
+  .brand-copy small { display: block; color: rgba(248, 247, 250, .68); font-size: 6.4px; line-height: 1.2; letter-spacing: .1em; white-space: nowrap; }
   .hero h1 { font-size: 37px; }
   .result-card { min-height: 740px; }
   .result-card-head { align-items: flex-start; flex-direction: column; gap: 8px; }
