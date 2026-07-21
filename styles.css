@@ -98,7 +98,7 @@ button, input, textarea { font: inherit; }
 .method-layout { display: grid; grid-template-columns: .9fr 1.1fr; align-items: center; gap: 90px; }
 .method-visual { position: relative; min-height: 720px; overflow: hidden; }
 .method-visual picture, .method-visual img, .method-visual::after { position: absolute; inset: 0; width: 100%; height: 100%; }
-.method-visual img { object-fit: cover; object-position: center; border-radius: 4px 120px 4px 4px; }
+.method-visual img { object-fit: cover; object-position: 83% center; border-radius: 4px 120px 4px 4px; }
 .method-visual::after { content: ""; background: linear-gradient(0deg, rgba(10,12,18,.72), transparent 55%); border-radius: 4px 120px 4px 4px; }
 .visual-note { position: absolute; z-index: 2; right: 28px; bottom: 28px; width: 310px; padding: 24px; background: rgba(13,15,23,.88); border: 1px solid var(--line-dark); backdrop-filter: blur(10px); }
 .visual-note strong { display: block; margin-bottom: 10px; color: var(--lilac); font-family: Georgia, serif; font-size: 21px; font-weight: 400; }
@@ -336,7 +336,7 @@ button, input, textarea { font: inherit; }
 
   .method-layout { gap: 56px; }
   .method-visual { min-height: 450px; width: 100%; }
-  .method-visual img { object-position: 42% center; border-radius: 4px 82px 4px 4px; }
+  .method-visual img { object-position: 68% center; border-radius: 4px 82px 4px 4px; }
   .method-visual::after { border-radius: 4px 82px 4px 4px; }
   .visual-note { right: 14px; bottom: 15px; width: min(250px, calc(100% - 28px)); padding: 19px; }
   .method-lead { font-size: 15px; }
