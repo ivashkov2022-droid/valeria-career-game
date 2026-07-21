@@ -188,7 +188,7 @@ button, input, textarea { font: inherit; }
 .contact-photo::after { content: ""; background: linear-gradient(0deg, rgba(10,12,18,.82), transparent 54%); }
 .contact-photo-copy { position: absolute; z-index: 2; right: 38px; bottom: 38px; left: 38px; }
 .contact-photo-copy span { color: var(--lilac); font-size: 9px; text-transform: uppercase; letter-spacing: .16em; }
-.contact-photo-copy strong { display: block; max-width: 480px; margin-top: 13px; font-family: Georgia, serif; font-size: 27px; font-weight: 400; line-height: 1.25; }
+.contact-photo-copy strong { display: block; max-width: 480px; margin-top: 13px; color: rgba(248,247,250,.92); font-family: Georgia, serif; font-size: 27px; font-weight: 400; line-height: 1.25; }
 .lead-form { padding: 58px; color: var(--white); }
 .form-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 35px; padding-bottom: 28px; border-bottom: 1px solid var(--line-dark); }
 .form-heading span { font-family: Georgia, serif; font-size: 34px; }
