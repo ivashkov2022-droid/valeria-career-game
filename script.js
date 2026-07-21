@@ -45,6 +45,52 @@
     revealItems.forEach((item) => item.classList.add('is-visible'));
   }
 
+  const deskCards = document.querySelectorAll('.question-grid .question-card');
+  const desktopDesk = window.matchMedia('(hover: hover) and (pointer: fine) and (min-width: 900px)');
+  const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+
+  deskCards.forEach((card) => {
+    let drag = null;
+    let snapTimer = null;
+
+    const resetCard = () => {
+      if (!drag) return;
+      const pointerId = drag.pointerId;
+      drag = null;
+      if (card.hasPointerCapture?.(pointerId)) card.releasePointerCapture(pointerId);
+      card.classList.remove('is-dragging');
+      card.classList.add('is-snapping');
+      card.style.setProperty('--drag-x', '0px');
+      card.style.setProperty('--drag-y', '0px');
+      card.style.setProperty('--drag-r', '0deg');
+      window.clearTimeout(snapTimer);
+      snapTimer = window.setTimeout(() => card.classList.remove('is-snapping'), 480);
+    };
+
+    card.addEventListener('pointerdown', (event) => {
+      if (!desktopDesk.matches || event.button !== 0 || !card.classList.contains('is-visible')) return;
+      window.clearTimeout(snapTimer);
+      card.classList.remove('is-snapping');
+      drag = { pointerId: event.pointerId, startX: event.clientX, startY: event.clientY };
+      card.setPointerCapture(event.pointerId);
+      card.classList.add('is-dragging');
+    });
+
+    card.addEventListener('pointermove', (event) => {
+      if (!drag || event.pointerId !== drag.pointerId) return;
+      event.preventDefault();
+      const isCore = card.classList.contains('question-card-core');
+      const x = clamp(event.clientX - drag.startX, isCore ? -54 : -76, isCore ? 54 : 76);
+      const y = clamp(event.clientY - drag.startY, isCore ? -30 : -44, isCore ? 30 : 44);
+      card.style.setProperty('--drag-x', `${x}px`);
+      card.style.setProperty('--drag-y', `${y}px`);
+      card.style.setProperty('--drag-r', `${clamp(x / 85, -0.8, 0.8)}deg`);
+    });
+
+    card.addEventListener('pointerup', resetCard);
+    card.addEventListener('pointercancel', resetCard);
+  });
+
   document.querySelectorAll('.faq-list details').forEach((detail) => {
     detail.addEventListener('toggle', () => {
       if (!detail.open) return;
