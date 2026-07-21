@@ -132,13 +132,15 @@ button, input, textarea { font: inherit; }
 .result-company .check-list li { color: rgba(248,247,250,.64); }
 .check-list li::before { content: "↗"; position: absolute; top: 0; left: 0; color: var(--violet); }
 .result-company .check-list li::before { color: var(--lilac); }
-.document-preview { position: absolute; right: 40px; bottom: -75px; width: 300px; height: 305px; padding: 45px 34px; background: #fff; border: 1px solid rgba(20,23,34,.08); box-shadow: 0 24px 50px rgba(20,23,34,.12); transform: rotate(4deg); }
-.document-preview > div { display: grid; gap: 6px; margin-bottom: 54px; }
-.document-preview > div span { width: 72%; height: 2px; background: #dedde0; }
-.document-preview > div span:nth-child(2) { width: 58%; }
-.document-preview > div span:nth-child(3) { width: 66%; }
-.document-preview b { display: block; max-width: 220px; color: var(--ink); font-family: Georgia, serif; font-size: 31px; font-weight: 400; line-height: 1.02; }
-.document-preview small { position: absolute; bottom: 28px; color: #8f8b95; font-size: 8px; text-transform: uppercase; letter-spacing: .18em; }
+.document-preview { position: absolute; right: 40px; bottom: -75px; width: 300px; height: 305px; padding: 45px 34px; background: linear-gradient(145deg, #fff 0%, #faf8f5 100%); border: 1px solid rgba(77,55,107,.2); box-shadow: 0 24px 50px rgba(20,23,34,.1), inset 0 0 0 11px rgba(116,86,154,.035); transform: rotate(4deg); }
+.document-preview::before { content: ""; position: absolute; inset: 14px; border: 1px solid rgba(77,55,107,.16); pointer-events: none; }
+.document-preview::after { content: ""; position: absolute; top: 14px; left: 14px; width: 46px; height: 3px; background: var(--violet-dark); }
+.document-preview > div { position: relative; z-index: 1; display: grid; gap: 5px; margin-bottom: 46px; }
+.document-preview > div span { width: 72%; height: 1px; background: rgba(77,55,107,.2); }
+.document-preview > div span:nth-child(2) { width: 48%; }
+.document-preview > div span:nth-child(3) { width: 60%; }
+.document-preview b { position: relative; z-index: 1; display: block; max-width: 230px; color: var(--ink); font-family: Arial, Helvetica, sans-serif; font-size: 25px; font-weight: 650; line-height: 1.04; letter-spacing: -.035em; }
+.document-preview small { position: absolute; z-index: 1; bottom: 28px; color: rgba(77,55,107,.72); font-size: 8px; font-weight: 700; text-transform: uppercase; letter-spacing: .18em; }
 .role-map { position: absolute; right: 38px; bottom: 36px; left: 38px; height: 165px; border-top: 1px solid var(--line-dark); }
 .role-node { position: absolute; z-index: 2; display: grid; width: 84px; height: 84px; place-items: center; color: var(--white); background: #262a3d; border: 1px solid rgba(221,207,233,.38); border-radius: 50%; font-size: 10px; }
 .role-node-a { bottom: 0; left: 5%; }
@@ -350,7 +352,7 @@ button, input, textarea { font: inherit; }
   .result-card h3 { margin: 42px 0 38px; font-size: 35px; }
   .check-list { padding-bottom: 220px; }
   .document-preview { right: 25px; bottom: -52px; width: min(270px, calc(100% - 50px)); height: 275px; padding: 38px 29px; }
-  .document-preview b { font-size: 28px; }
+  .document-preview b { font-size: 23px; }
   .role-map { right: 25px; bottom: 30px; left: 25px; height: 155px; }
   .role-node { width: 70px; height: 70px; font-size: 9px; }
   .role-node-b { left: calc(50% - 35px); }
